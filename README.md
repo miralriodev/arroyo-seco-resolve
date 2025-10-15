@@ -1,8 +1,8 @@
-# 🌎 Experiencias Únicas
+# Experiencias Únicas
 
 **Plataforma de gestión de servicios turísticos** que conecta a anfitriones con visitantes para ofrecer experiencias locales únicas, alojamiento, alimentos, recorridos y guías.
 
-## 🧩 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 experiencias-unicas/
@@ -10,7 +10,7 @@ experiencias-unicas/
 └── frontend/ → Aplicación web (React + Vite)
 ```
 
-## 🚀 Cómo iniciar el proyecto
+## Cómo iniciar el proyecto
 
 1. Clonar el repositorio:
    ```bash
@@ -33,7 +33,7 @@ experiencias-unicas/
    cd frontend && npm run dev
    ```
 
-## 🧭 Flujo de trabajo (Git)
+## Flujo de trabajo (Git)
 
 - `main` → rama estable para producción
 - `develop` → integración de nuevas funciones

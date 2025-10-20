@@ -1,0 +1,40 @@
+/* ======== CONTENIDO PRINCIPAL ======== */
+.main-content {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.main-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.loading {
+  text-align: center;
+}
+
+/* ======== GRID DE TARJETAS ======== */
+.grid-propiedades {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  align-items: start;
+}
+
+/* ======== TARJETAS ======== */
+.tarjeta {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+

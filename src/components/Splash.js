@@ -10,7 +10,7 @@ export default function Splash() {
 
     return (
         <div style={{ textAlign: "center", marginTop: "20vh" }}>
-            <h1> Seguridad y confort en cada alojamiento. </h1>
+            <h1> Historias que inspiran, palabras que perduran. </h1>
             <p>Cargando...</p>
         </div>
     );

@@ -1,6 +1,6 @@
 {
-  "short_name": "MiPWA",
-  "name": "Mi Aplicación Progresiva",
+  "short_name": "Arroyo Seco",
+  "name": "Arroyo Seco Resolve",
   "icons": [
     {
       "src": "icons/papel2.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#282c34",
+  "theme_color": "#007a74",
   "background_color": "#ffffff"
 }

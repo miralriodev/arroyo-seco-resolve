@@ -10,8 +10,8 @@ export default function Splash() {
 
     return (
         <div style={{ textAlign: "center", marginTop: "20vh" }}>
-            <h1> Historias que inspiran, palabras que perduran. </h1>
-            <p>Cargando...</p>
+            <h1>Arroyo Seco Resolve</h1>
+            <p>Conectando experiencias locales. Cargando...</p>
         </div>
     );
 }

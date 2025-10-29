@@ -1,4 +1,4 @@
-const CACHE_NAME = "mi-pwa-cache-v1";
+const CACHE_NAME = "arroyo-seco-cache-v1";
 
 // Archivos esenciales que siempre estarán en cache
 const urlsToCache = [
@@ -31,22 +31,29 @@ self.addEventListener("activate", e => {
 
 // Interceptar peticiones y manejar cache dinámico
 self.addEventListener("fetch", e => {
+    const req = e.request;
+    const url = new URL(req.url);
+
+    // Solo manejar GET del mismo origen
+    if (req.method !== "GET" || url.origin !== self.location.origin) {
+        e.respondWith(fetch(req).catch(() => caches.match("/offline.html")));
+        return;
+    }
+
     e.respondWith(
-        caches.match(e.request).then(cachedResponse => {
+        caches.match(req).then(cachedResponse => {
             if (cachedResponse) return cachedResponse;
 
-            return fetch(e.request)
-                .then(networkResponse => {
-                    // Guardar en cache dinámico
-                    return caches.open(CACHE_NAME).then(cache => {
-                        cache.put(e.request, networkResponse.clone());
+            return fetch(req)
+                .then(networkResponse =>
+                    caches.open(CACHE_NAME).then(cache => {
+                        cache.put(req, networkResponse.clone());
                         return networkResponse;
-                    });
-                })
+                    })
+                )
                 .catch(() => {
-                    // Fallback si no hay red y es un HTML
-                    if (e.request.destination === "document") {
-                        return caches.match("/index.html");
+                    if (req.destination === "document") {
+                        return caches.match("/offline.html");
                     }
                 });
         })
